@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(express.static("public"));
-
+const items=[];
 app.get("/", function(req, res) {
 let day=date.getDay();
   res.render("list", {kindday:day , newitems:items});
